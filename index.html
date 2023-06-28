@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> VMA Media</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1> VMA Media</h1>
+    <!-- Include the header navigation file -->
+    <div id="header-navigation"></div>
+  </header>
+  
+  <script>
+    // Load header navigation content
+    const headerNavContainer = document.getElementById('header-navigation');
+    const headerNavRequest = new XMLHttpRequest();
+    headerNavRequest.onload = function () {
+      if (headerNavRequest.status === 200) {
+        headerNavContainer.innerHTML = headerNavRequest.responseText;
+      }
+    };
+    headerNavRequest.open('GET', 'header.html', true);
+    headerNavRequest.send();
+  </script>
+  
+
+  <section class="hero-image">
+    <div class="hero-content fade-in">
+      <h2>Welcome to  VMA Media</h2>
+      <p>Your solution for digital marketing and social media management.</p>
+      <a href="services.html" class="cta-button">Explore Our Services</a>
+    </div>
+  </section>
+
+  <section class="services fade-in">
+    <h3>Our Services</h3>
+    <p>We offer a wide range of services to help businesses grow their online presence:</p>
+    <ul>
+      <li>Social media management</li>
+      <li>Content creation and marketing</li>
+      <li>Advertising campaigns</li>
+    </ul>
+    <a href="services.html" class="cta-button">Learn More</a>
+  </section>
+
+  <section class="featured-work">
+    <h3>Featured Work</h3>
+    <div class="work-item fade-in">
+      <img src="work1.jpg" alt="Work 1">
+      <h4>Client 1</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="portfolio.html" class="work-link">View More</a>
+    </div>
+    <div class="work-item fade-in">
+      <img src="work2.jpg" alt="Work 2">
+      <h4>Client 2</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="portfolio.html" class="work-link">View More</a>
+    </div>
+    <div class="work-item fade-in">
+      <img src="work3.jpg" alt="Work 3">
+      <h4>Client 3</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="portfolio.html" class="work-link">View More</a>
+    </div>
+  </section>
+
+  <section class="testimonial fade-in">
+    <h3>Client Testimonials</h3>
+    <div class="testimonial-item">
+      <img src="client1.jpg" alt="Client 1">
+      <blockquote>
+        " VMA Media has transformed our social media presence. They are professional, creative, and deliver results."
+      </blockquote>
+      <cite>- John Doe, CEO</cite>
+    </div>
+    <div class="testimonial-item">
+      <img src="client2.jpg" alt="Client 2">
+      <blockquote>
+        "Working with  VMA Media has been a game-changer for our business. Their strategies have helped us reach new audiences and boost our online sales."
+      </blockquote>
+      <cite>- Jane Smith, Marketing Director</cite>
+    </div>
+  </section>
+
+  <section class="contact fade-in">
+    <div class="container">
+      <h3>Contact Us</h3>
+      <p>Ready to take your online presence to the next level? Get in touch with us today!</p>
+      <a href="contact.html" class="cta-button">Contact Now</a>
+    </div>
+  </section>
+
+  <script>
+    // Load footer content
+    const footerContainer = document.createElement('div');
+    footerContainer.setAttribute('id', 'footer-container');
+    document.body.appendChild(footerContainer);
+  
+    const footerRequest = new XMLHttpRequest();
+    footerRequest.onload = function () {
+      if (footerRequest.status === 200) {
+        footerContainer.innerHTML = footerRequest.responseText;
+      }
+    };
+    footerRequest.open('GET', 'footer.html', true);
+    footerRequest.send();
+  </script>
+  
+</body>
+</html>

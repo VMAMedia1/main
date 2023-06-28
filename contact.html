@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> VMA Media - Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1> VMA Media</h1>
+    <!-- Include the header navigation file -->
+    <div id="header-navigation"></div>
+  </header>
+
+  <section class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Feel free to reach out to us for any inquiries or collaboration:</p>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // Load header navigation content
+    const headerNavContainer = document.getElementById('header-navigation');
+    const headerNavRequest = new XMLHttpRequest();
+    headerNavRequest.onload = function () {
+      if (headerNavRequest.status === 200) {
+        headerNavContainer.innerHTML = headerNavRequest.responseText;
+      }
+    };
+    headerNavRequest.open('GET', 'header.html', true);
+    headerNavRequest.send();
+  </script>
+
+  <script>
+    // Load footer content
+    const footerContainer = document.createElement('div');
+    footerContainer.setAttribute('id', 'footer-container');
+    document.body.appendChild(footerContainer);
+
+    const footerRequest = new XMLHttpRequest();
+    footerRequest.onload = function () {
+      if (footerRequest.status === 200) {
+        footerContainer.innerHTML = footerRequest.responseText;
+      }
+    };
+    footerRequest.open('GET', 'footer.html', true);
+    footerRequest.send();
+  </script>
+
+</body>
+</html>

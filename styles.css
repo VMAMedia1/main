@@ -1,0 +1,336 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero section styles */
+.hero-image {
+  background-image: url('hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+
+/* Services section styles */
+.services {
+  background-color: #f9f9f9;
+  padding: 40px;
+  text-align: center;
+}
+
+.services h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.services p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.services ul {
+  list-style: none;
+}
+
+.services ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Featured work section styles */
+.featured-work {
+  padding: 40px;
+  text-align: center;
+}
+
+.featured-work h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.work-item {
+  display: inline-block;
+  width: 300px;
+  margin: 20px;
+}
+
+.work-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.work-item h4 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.work-item p {
+  margin-bottom: 10px;
+}
+
+.work-link {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.work-link:hover {
+  background-color: #555;
+}
+
+/* Testimonial section styles */
+.testimonial {
+  background-color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+.testimonial h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.testimonial-item {
+  margin-bottom: 40px;
+}
+
+.testimonial-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.testimonial-item blockquote {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.testimonial-item cite {
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* styles.css */
+
+/* Contact Section */
+.contact-section {
+  background-color: #f7f7f7;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-section h2 {
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Add 'hidden' class to hide the content initially */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+}
+
+/* Remove 'active' class from the fade-in animation */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.fade-in.active {
+  opacity: 1;
+}
+/* Styles for the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Additional styles for the page */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* styles.css */
+
+/* Login Section */
+.login-section {
+  background-color: #f7f7f7;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-section h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+

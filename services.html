@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> VMA Media - Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1> VMA Media</h1>
+        <!-- Include the header navigation file -->
+        <div id="header-navigation"></div>
+      </header>
+      
+      <script>
+        // Load header navigation content
+        const headerNavContainer = document.getElementById('header-navigation');
+        const headerNavRequest = new XMLHttpRequest();
+        headerNavRequest.onload = function () {
+          if (headerNavRequest.status === 200) {
+            headerNavContainer.innerHTML = headerNavRequest.responseText;
+          }
+        };
+        headerNavRequest.open('GET', 'header.html', true);
+        headerNavRequest.send();
+      </script>
+      
+
+  <section class="services">
+    <h2>Services</h2>
+    <div class="service-item fade-in">
+      <img src="service1.jpg" alt="Service 1">
+      <h4>Social Media Management</h4>
+      <p>Description1.</p>
+      <a href="#" class="service-link">Learn More</a>
+    </div>
+    <div class="service-item fade-in">
+      <img src="service2.jpg" alt="Service 2">
+      <h4>Content Creation and Marketing</h4>
+      <p>Description2.</p>
+      <a href="#" class="service-link">Learn More</a>
+    </div>
+    <div class="service-item fade-in">
+      <img src="service3.jpg" alt="Service 3">
+      <h4>Advertising Campaigns</h4>
+      <p>Description3.</p>
+      <a href="#" class="service-link">Learn More</a>
+    </div>
+  </section>
+
+  <script>
+    // Load footer content
+    const footerContainer = document.createElement('div');
+    footerContainer.setAttribute('id', 'footer-container');
+    document.body.appendChild(footerContainer);
+  
+    const footerRequest = new XMLHttpRequest();
+    footerRequest.onload = function () {
+      if (footerRequest.status === 200) {
+        footerContainer.innerHTML = footerRequest.responseText;
+      }
+    };
+    footerRequest.open('GET', 'footer.html', true);
+    footerRequest.send();
+  </script>
+  
+</body>
+</html>

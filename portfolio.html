@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SocialMagnet Agency - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>SocialMagnet Agency</h1>
+        <!-- Include the header navigation file -->
+        <div id="header-navigation"></div>
+      </header>
+      
+      <script>
+        // Load header navigation content
+        const headerNavContainer = document.getElementById('header-navigation');
+        const headerNavRequest = new XMLHttpRequest();
+        headerNavRequest.onload = function () {
+          if (headerNavRequest.status === 200) {
+            headerNavContainer.innerHTML = headerNavRequest.responseText;
+          }
+        };
+        headerNavRequest.open('GET', 'header.html', true);
+        headerNavRequest.send();
+      </script>
+      
+
+  <section class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-item fade-in">
+      <img src="portfolio1.jpg" alt="Portfolio 1">
+      <h4>Project 1</h4>
+      <p>Description1.</p>
+      <a href="#" class="portfolio-link">Learn More</a>
+    </div>
+    <div class="portfolio-item fade-in">
+      <img src="portfolio2.jpg" alt="Portfolio 2">
+      <h4>Project 2</h4>
+      <p>Description2.</p>
+      <a href="#" class="portfolio-link">Learn More</a>
+    </div>
+    <div class="portfolio-item fade-in">
+      <img src="portfolio3.jpg" alt="Portfolio 3">
+      <h4>Project 3</h4>
+      <p>Description3.</p>
+      <a href="#" class="portfolio-link">Learn More</a>
+    </div>
+  </section>
+
+  <script>
+    // Load footer content
+    const footerContainer = document.createElement('div');
+    footerContainer.setAttribute('id', 'footer-container');
+    document.body.appendChild(footerContainer);
+  
+    const footerRequest = new XMLHttpRequest();
+    footerRequest.onload = function () {
+      if (footerRequest.status === 200) {
+        footerContainer.innerHTML = footerRequest.responseText;
+      }
+    };
+    footerRequest.open('GET', 'footer.html', true);
+    footerRequest.send();
+  </script>
+  
+</body>
+</html>
