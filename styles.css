@@ -109,6 +109,33 @@ nav ul li a {
   margin-bottom: 10px;
 }
 
+.services .service-item {
+  display: inline-block;
+  margin-bottom: 30px;
+  text-align: center; /* Center the content */
+}
+
+.services .service-item img {
+  display: block;
+  width: 200px; /* Adjust the desired width */
+  height: auto;
+  margin: 0 auto;
+}
+
+.services .service-item h4 {
+  margin-top: 10px; /* Add margin to separate the image from the heading */
+}
+
+.services .service-item p {
+  margin-bottom: 15px; /* Adjust the spacing as needed */
+}
+
+.services .service-item .service-link {
+  display: block;
+  text-align: center; /* Center the "Learn More" link */
+}
+
+
 /* Featured work section styles */
 .featured-work {
   padding: 40px;
@@ -335,11 +362,6 @@ body {
 
 /* styles.css */
 
-/* Login Section */
-.login-section {
-  background-color: #f7f7f7;
-  padding: 40px 0;
-}
 
 .container {
   max-width: 400px;
