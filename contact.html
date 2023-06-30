@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> VMA Media - Contact Us</title>
+  <title>VMA Media - Contact Us</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1> VMA Media</h1>
+    <h1>VMA Media</h1>
     <!-- Include the header navigation file -->
     <div id="header-navigation"></div>
   </header>
@@ -15,7 +15,7 @@
     <div class="container">
       <h2>Contact Us</h2>
       <p>Feel free to reach out to us for any inquiries or collaboration:</p>
-      <form>
+      <form netlify>
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required>
@@ -33,6 +33,7 @@
 
         <button type="submit">Send</button>
       </form>
+      <div id="confirmation-message" style="display: none;">Thank you for your message! We will get back to you soon.</div>
     </div>
   </section>
 
@@ -65,5 +66,27 @@
     footerRequest.send();
   </script>
 
+  <script>
+    // Display confirmation message after form submission
+    const form = document.querySelector('form');
+    const confirmationMessage = document.getElementById('confirmation-message');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      // Submit the form data asynchronously
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+      })
+        .then(function () {
+          // Show the confirmation message and reset the form
+          form.reset();
+          confirmationMessage.style.display = 'block';
+        })
+        .catch(function (error) {
+          console.error('Error:', error);
+        });
+    });
+  </script>
 </body>
 </html>
